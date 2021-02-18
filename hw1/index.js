@@ -16,7 +16,7 @@ const floorCheesePrice = Math.floor(cheesePrice);
 const allFloorSumPrice = floorBreadPrice + floorMeatPrice + floorCheesePrice;
 console.log(Math.floor(allFloorSumPrice));
 
-const roundAllSumPrice = Math.round(allSumPrice);
+const roundAllSumPrice = Math.round(allSumPrice  / 100) * 100;
 console.log(roundAllSumPrice);
  
 let isEven = Boolean();
