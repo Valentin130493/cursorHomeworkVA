@@ -39,5 +39,5 @@ const discount = Math.floor(Math.random() * 100);
 console.log(discount + "%");
 const invoice = (allSumPrice - allSumPrice*(discount/100)).toFixed(2);
 console.log(invoice);
-const netProfit = (allSumPrice/2- invoice).toFixed(2);
+const netProfit = (allSumPrice/2- allSumPrice*(discount/100)).toFixed(2);
 console.log(netProfit);
