@@ -1,15 +1,21 @@
-const numberN = +prompt('Please, enter number N');
+let numberN = +prompt('Please, enter number N');
 console.log(numberN);
 if(Number.isInteger(numberN)) {
-console.log("Whole number");
-} else{ console.log("This number is not correct");
+} else{ while  ( numberN % 1 !== 0 ) {
+  numberN  =  +prompt("Wrong! You need enter an integer number");
 }
-
-const numberM = +prompt('Please, enter number M');
+}
+let numberM = +prompt('Please, enter number M');
 console.log(numberM);
 if(Number.isInteger(numberM)) {
-console.log("Whole number");
-} else{ alert("This number is not correct"); }
+} else{while  ( numberM % 1 !== 0 ) {
+  numberM = +prompt ("Wrong! You need enter an integer number");
+}
+}
+
+while  (  numberN >= numberM ) {
+  numberM = +prompt( "The second number must be greater than first" );
+}
 
 let scipEvenNumbers = confirm("Do you need to skip even numbers?");
 let allSumNumbers = 0;
