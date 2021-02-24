@@ -1,18 +1,17 @@
 let numberN = +prompt('Please, enter number N');
-console.log(numberN);
 if(Number.isInteger(numberN)) {
-} else{ while  ( numberN % 1 !== 0 ) {
-  numberN  =  +prompt("Wrong! You need enter an integer number");
+} else{ while ( !Number.isInteger(numberN) || numberN === 0 ) {
+  numberN = +prompt("Wrong! You need enter an integer number");
 }
 }
+console.log("You numder N = " = numberN);
 let numberM = +prompt('Please, enter number M');
-console.log(numberM);
 if(Number.isInteger(numberM)) {
-} else{while  ( numberM % 1 !== 0 ) {
-  numberM = +prompt ("Wrong! You need enter an integer number");
+} else{while ( !Number.isInteger(numberM) || numberM === 0 ) {
+  numberM = +prompt("Wrong! You need enter an integer number");
 }
 }
-
+console.log("You numder M = " + numberM);
 while  (  numberN >= numberM ) {
   numberM = +prompt( "The second number must be greater than first" );
 }
@@ -28,4 +27,4 @@ if(scipEvenNumbers){
 }else { allSumNumbers += i;
   }
 }
-console.log(allSumNumbers);
+console.log('Total sum:' + allSumNumbers);
