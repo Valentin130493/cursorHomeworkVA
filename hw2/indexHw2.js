@@ -4,7 +4,7 @@ if(Number.isInteger(numberN)) {
   numberN = +prompt("Wrong! You need enter an integer number");
 }
 }
-console.log("You numder N = " = numberN);
+console.log("You numder N = " + numberN);
 let numberM = +prompt('Please, enter number M');
 if(Number.isInteger(numberM)) {
 } else{while ( !Number.isInteger(numberM) || numberM === 0 ) {
@@ -15,6 +15,7 @@ console.log("You numder M = " + numberM);
 while  (  numberN >= numberM ) {
   numberM = +prompt( "The second number must be greater than first" );
 }
+console.log(numberM)
 
 let scipEvenNumbers = confirm("Do you need to skip even numbers?");
 let allSumNumbers = 0;
