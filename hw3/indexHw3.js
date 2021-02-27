@@ -31,8 +31,7 @@ function getMaxDigit(number) {
   
   function generateRandomPassword() { 
     let pass = ''; 
-    let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' +  
-            'abcdefghijklmnopqrstuvwxyz0123456789@#$'; 
+    let str = '0123456789'; 
       
     for (i = 1; i <= 8; i++) { 
         let char = Math.floor(Math.random() 
