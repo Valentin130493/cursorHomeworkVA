@@ -29,18 +29,16 @@ function getMaxDigit(number) {
     return count;
   }
   
-  function generateRandomPassword() { 
-    let pass = ''; 
-    let str = '0123456789'; 
-      
-    for (i = 1; i <= 8; i++) { 
-        let char = Math.floor(Math.random() 
-                    * str.length + 1); 
-          
-        pass += str.charAt(char) 
-    }   
-    return pass; 
-} 
+  function generateRandomPassword(n = 8) {
+    let pass = '';
+    let str = '0123456789';
+    for (i = 0; i < n; i++) {
+    let digit = Math.floor(Math.random()
+    * str.length);
+    pass += digit
+    }
+    return pass;
+  }
 
   
   document.writeln(`The max digit is : ${getMaxDigit(1545784229)} <br>`);
@@ -49,4 +47,3 @@ function getMaxDigit(number) {
   document.writeln(`Your random number is: ${getRandomNumber(1, 10)} <br>`);
   document.writeln(`Count letter: ${countLetter("o", "Around the world and return home")} <br>`);
   document.writeln(`Your random password is: ${generateRandomPassword()} <br>`);
-  
