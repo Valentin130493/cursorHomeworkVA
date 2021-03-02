@@ -3,7 +3,7 @@ const themes = ["Диференціальні рівняння", "Теорія �
 const marks = [4, 5, 5, 3, 4, 5];
 
 
-function arrayPairOfStudents(students) {
+function createPairOfStudents(students) {
   const firstPair = [students[0], students[2]];
   const secondPair = [students[1], students[3]];
   const thirdPair = [students[4], students[5]];
@@ -11,7 +11,7 @@ function arrayPairOfStudents(students) {
   return [firstPair, secondPair, thirdPair];
 }
 
-function arrayPairWithTheme(pairs, themes) {
+function getPairWithTheme(pairs, themes) {
   const studentsPairs = [];
 
   for (let i = 0; i < pairs.length; i++) {
@@ -25,7 +25,7 @@ function arrayPairWithTheme(pairs, themes) {
   return studentsPairs;
 }
 
-function arrayStudentsWithMarks(students, marks) {
+function giveStudentsWithMarks(students, marks) {
   const studentsWithMarks = [];
 
   for (let i = 0; i < students.length; i++) {
@@ -37,7 +37,7 @@ function arrayStudentsWithMarks(students, marks) {
   return studentsWithMarks;
 }
 
-function arrayPairsWithRandomMarks(pairsWithThemes) {
+function getPairsWithRandomMarks(pairsWithThemes) {
   const result = [];
   
   for (let i = 0; i < pairsWithThemes.length; i++) {
@@ -50,10 +50,10 @@ function arrayPairsWithRandomMarks(pairsWithThemes) {
   return result;
 }
 
-const pairs = arrayPairOfStudents(students);
-const pairsWithThemes = arrayPairWithTheme(pairs, themes);
-const studentsWithMarks = arrayStudentsWithMarks(students, marks);
-const pairsWithRandomMarks = arrayPairsWithRandomMarks(pairsWithThemes);
+const pairs = createPairOfStudents(students);
+const pairsWithThemes = getPairWithTheme(pairs, themes);
+const studentsWithMarks = giveStudentsWithMarks(students, marks);
+const pairsWithRandomMarks = getPairsWithRandomMarks(pairsWithThemes);
 
 console.log("Pair array :", pairs);
 console.log('Pair + theme array :', pairsWithThemes);
