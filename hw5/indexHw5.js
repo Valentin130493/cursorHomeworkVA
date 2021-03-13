@@ -23,11 +23,8 @@ function countPositiveNumbers(...numbers){
 console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6));
 
 function getDividedByFive(...numbers){
-    for(let i = 0; i < numbers.length; i++) {
-        if(numbers[i] % 5 === 0){
-           return numbers[i];
-        }
-    }
+    let dividedByFiveNumbers = numbers.filter((item,index) => item % 5 === 0);
+    return dividedByFiveNumbers
 }
 console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
