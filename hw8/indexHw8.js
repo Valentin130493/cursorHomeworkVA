@@ -1,0 +1,67 @@
+class Student {
+    constructor(university, course, fullName, marks = []) {
+        this.university = university;
+        this.course = course;
+        this.fullName = fullName;
+        this.marks = marks;
+        this.isActiveStudent = true;
+    }
+
+
+    get getInfo() {
+        return `Student of ${this.course} course,  ${this.university}, fullname is: ${fullName}`
+    }
+    get getMark() {
+        if (this.isActiveStudent) {
+            return this.marks
+        }
+        return this.marks
+    }
+    set setMarks(mark) {
+        if (this.isActiveStudent) {
+            return this.marks.push(mark)
+        }
+        return this.marks.push(mark);
+    }
+    getAverageMark() {
+        return this.marks.reduce((acc, item) => acc + item) / this.marks.length;
+    }
+    dismiss() {
+        this.isActiveStudent = false;
+    }
+    recover() {
+        this.isActiveStudent = true;
+    }
+
+}
+
+
+
+
+class BudgetStudent extends Student {
+    constructor(university, course, fullName, marks, isActiveStudent) {
+        super(university, course, fullName, marks, isActiveStudent)
+        setInterval(() => { this.getScholarship() }, 30000)
+    }
+    getScholarship() {
+        const theLoverstAverageMarks = 4;
+        if (this.getAverageMark() > theLoverstAverageMarks && this.isActiveStudent) {
+            console.log(`Ви отримали 1400 грн. стипендії`)
+        }
+        console.log(`Вибачте, але Ви без стипендії`)
+    }
+
+}
+
+
+
+
+
+const ostapBender = new Student(`Вища Школи Психотерапії м.Одеса`, 1, `Остап Бендер`, [5, 4, 4, 5]);
+ostapBender.setMarks = 5;
+const vasylBender = new BudgetStudent(`Вища Школи Психотерапії м.Одеса`, 1, `Василь Бендер`, [5, 4, 4, 5]);
+vasyLBender.setMarks = 5;
+
+console.log(ostapBender.getInfo());
+console.log(vasyLBender.getInfo());
+console.log(vasyLBender.getScholarship());
