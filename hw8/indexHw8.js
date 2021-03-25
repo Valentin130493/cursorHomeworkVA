@@ -9,7 +9,7 @@ class Student {
 
 
     get getInfo() {
-        return `Student of ${this.course} course,  ${this.university}, fullname is: ${fullName}`
+        return `Student of ${this.course} course,  ${this.university}, fullname is: ${this.fullName}`
     }
     get getMark() {
         if (this.isActiveStudent) {
