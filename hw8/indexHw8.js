@@ -62,6 +62,6 @@ ostapBender.setMarks = 5;
 const vasylBender = new BudgetStudent(`Вища Школи Психотерапії м.Одеса`, 1, `Василь Бендер`, [5, 4, 4, 5]);
 vasylBender.setMarks = 5;
 
-console.log(ostapBender.getInfo());
-console.log(vasylBender.getInfo());
-console.log(vasylBender.getScholarship());
+console.log(ostapBender.getInfo);
+console.log(vasylBender.getInfo);
+console.log(vasylBender.getScholarship);
