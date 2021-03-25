@@ -64,4 +64,4 @@ vasylBender.setMarks = 5;
 
 console.log(ostapBender.getInfo);
 console.log(vasylBender.getInfo);
-console.log(vasylBender.getScholarship);
+console.log(vasylBender.getScholarship());
