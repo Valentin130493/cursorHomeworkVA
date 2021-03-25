@@ -60,8 +60,8 @@ class BudgetStudent extends Student {
 const ostapBender = new Student(`Вища Школи Психотерапії м.Одеса`, 1, `Остап Бендер`, [5, 4, 4, 5]);
 ostapBender.setMarks = 5;
 const vasylBender = new BudgetStudent(`Вища Школи Психотерапії м.Одеса`, 1, `Василь Бендер`, [5, 4, 4, 5]);
-vasyLBender.setMarks = 5;
+vasylBender.setMarks = 5;
 
 console.log(ostapBender.getInfo());
-console.log(vasyLBender.getInfo());
-console.log(vasyLBender.getScholarship());
+console.log(vasylBender.getInfo());
+console.log(vasylBender.getScholarship());
