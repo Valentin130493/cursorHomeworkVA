@@ -12,13 +12,13 @@ class Student {
         return `Student of ${this.course} course,  ${this.university}, fullname is: ${this.fullName}`
     }
     get getMark() {
-        if (this.isActiveStudent) {
+        if (this.isActiveStudent === false) {
             return this.marks
         }
         return this.marks
     }
     set setMarks(mark) {
-        if (this.isActiveStudent) {
+        if (this.isActiveStudent === false) {
             return this.marks.push(mark)
         }
         return this.marks.push(mark);
