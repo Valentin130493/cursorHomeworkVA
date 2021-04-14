@@ -15,13 +15,13 @@ class Student {
         if (this.isActiveStudent === false) {
             return this.marks
         }
-        return this.marks
+        return null
     }
     set setMarks(mark) {
         if (this.isActiveStudent === false) {
             return this.marks.push(mark)
         }
-        return this.marks.push(mark);
+        return null
     }
     getAverageMark() {
         return this.marks.reduce((acc, item) => acc + item) / this.marks.length;
