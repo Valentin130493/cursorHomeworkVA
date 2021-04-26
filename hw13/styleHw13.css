@@ -1,0 +1,28 @@
+body {
+  background: url("https://starwarsblog.starwars.com/wp-content/uploads/2021/01/lucasfilm-games-announce-tall-A-1024x576.jpg")
+    no-repeat;
+  background-size: cover;
+}
+h1 {
+  color: yellow;
+  text-align: center;
+}
+div {
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin: 0 10px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 25px;
+  color: blue;
+  width: 100%;
+}
