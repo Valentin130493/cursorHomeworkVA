@@ -24,17 +24,41 @@ res.data.characters.forEach(item  => {
 getPlanet.addEventListener('click', getPlanetInfo);
 
 
-
- async function getPlanetInfo () {
-  const res = await axios.get(`https://swapi.dev/api/planets/?page=${p}`)
-  res.data.results.forEach(item  => {
-    console.log(`aaaa`, item)
-      axios.get(item) 
-      .then(function (response) {      
-      const planetName = document.createElement("div")
-      planetName.innerHTML = `${response.data.name}`
-      
-      wrapperContent.append(planetName)
-        })
-  });
-   }
+let p = 1
+function getPlanetInfo(page){
+    while(wrapperContent.firstChild) {
+        wrapperContent.removeChild(wrapperContent.firstChild);
+    };
+    axios.get(`https://swapi.dev/api/planets/?page=${p}`)
+    .then((res) => {
+        for (let i = 0; i < res.data.results.length; i++) {
+            const planet = document.createElement('div');
+            planet.innerHTML = res.data.results[i].name
+            wrapperContent.appendChild(planet); 
+        }
+        const previous = document.createElement('button');
+        previous.className = 'button'
+        previous.innerText = 'previous'
+        const next = document.createElement('button');
+        next.className = 'button'
+        next.innerText = 'next'
+        next.setAttribute('value', 'next');
+        previous.setAttribute('value', 'previous');
+        wrapperContent.appendChild(previous);
+        wrapperContent.appendChild(next);
+        next.addEventListener('click', function(){
+            p++;
+            if(p===7){
+                p=6
+            }
+            getPlanetInfo(p); 
+        });
+        previous.addEventListener('click', function(){
+            p--;
+            if(p===0){
+                p=1
+            }
+            getPlanetInfo(p);
+        });
+    })
+}

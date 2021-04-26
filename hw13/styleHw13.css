@@ -13,6 +13,8 @@ div {
 }
 button {
   margin: 0 10px;
+  background-color: yellow;
+  color: black;
 }
 .wrapper {
   display: flex;
@@ -23,6 +25,6 @@ button {
   flex-wrap: wrap;
   margin-top: 10px;
   gap: 25px;
-  color: blue;
+  color: rgb(243, 239, 8);
   width: 100%;
 }
