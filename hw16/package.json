@@ -1,0 +1,12 @@
+{
+  "name": "hw16",
+  "version": "1.0.0",
+  "description": "C:/Users/geras/OneDrive/Рабочий стол/Новая папка/cursorHomework/hw16/src",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
