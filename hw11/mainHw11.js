@@ -17,4 +17,4 @@ function removeTransition(e){
 }
 
 const keys = document.querySelectorAll('.key');
-keys.forEach(keys => keys.addEventListener('transitionend', removeTransition));
+keys.forEach(keys => keys.addEventListener('transitionend', 'click', removeTransition));
